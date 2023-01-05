@@ -34,9 +34,34 @@
       <div>
         <label for="Email"> Email</label><br>
         <input type="email" name="Email" id="Email" placeholder="Email">
-        </div>
             <input type="submit" value="Submit it!">
         </div>
+
+
+        <form>
+          <label for="hear-about-us">How did you hear about us?</label><br>
+          <input type="radio" id="friend" name="hear-about-us" value="friend">
+          <label for="friend">A friend told me about you</label><br>
+          <input type="radio" id="google" name="hear-about-us" value="google">
+          <label for="google">I found you on Google</label><br>
+          <input type="radio" id="social-media" name="hear-about-us" value="social media">
+          <label for="social-media">I saw you on social media</label><br>
+          <input type="radio" id="other" name="hear-about-us" value="other">
+          <label for="other">Other</label>
+        </form> 
+
+        <form>
+          <label for="Track">Which track are you interested in?:</label><br>
+          <select id="Track" name="Track">
+            <option value="ad">AD</option>
+            <option value="qa">QA</option>
+            <option value="business">Business</option>
+            <option value="it">IT</option>
+          </select>
+        </form> 
+        
+        
+        
     </form>
     <footer>
       <p>Copyright &copy; <script>document.write(new Date().getMonth() + 1 + '/' + new Date().getFullYear());</script></p>
