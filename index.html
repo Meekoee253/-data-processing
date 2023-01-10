@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/main-forms.css">
  </head>
  <body>
      <header>
@@ -34,10 +34,46 @@
       <div>
         <label for="Email"> Email</label><br>
         <input type="email" name="Email" id="Email" placeholder="Email">
-            <input type="submit" value="Submit it!">
+        </div>
+        <div>
+          <label for="Address"> Address</label><br>
+          <input type="text" name="Address" id="Address" placeholder="Address">
+        </div>
+        <div>
+          <label for="State"> State</label><br>
+          <select name="State" id="State" required>
+            <option value="">Please select state</option>
+            <option value="AK">Alaska</option>
+            <option value="CA">California</option>
+            <option value="OR">Oregon</option>
+            <option value="WA">Washington</option>
+          </select>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Would you like to join our mailing list?</legend>
+            <label><input type="radio" name="JoinMailingList" value="Yes" required> Yes</label><br>
+            <label><input type="radio" name="JoinMailingList" value="No"> No</label>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Interested In</legend>
+            <label><input type="checkbox" name="InterestedIn" value="Website" required> Website</label><br>
+            <label><input type="checkbox" name="InterestedIn" value="OnlineCalendar"> Online Calendar</label><br>
+            <label><input type="checkbox" name="InterestedIn" value="ContactForm"> Contact Form</label><br>
+            <label><input type="checkbox" name="InterestedIn" value="Lollipops"> Complimentary Lollipops</label>
+          </fieldset>
+        </div>
+        
+        <div>
+          <label for="Comments"> Comments</label><br>
+          <textarea name="Comments" id="Comments" placeholder="Comments" cols="36" rows="4"></textarea>
         </div>
 
+      
 
+        <div>
         <form>
           <label for="hear-about-us">How did you hear about us?</label><br>
           <input type="radio" id="friend" name="hear-about-us" value="friend">
@@ -49,16 +85,23 @@
           <input type="radio" id="other" name="hear-about-us" value="other">
           <label for="other">Other</label>
         </form> 
+        </div>
 
-        <form>
+
+          <form>
           <label for="Track">Which track are you interested in?:</label><br>
           <select id="Track" name="Track">
             <option value="ad">AD</option>
             <option value="qa">QA</option>
             <option value="business">Business</option>
             <option value="it">IT</option>
-          </select>
-        </form> 
+            <option value="Other">Other</option>
+            </select>
+          </form> 
+
+          <div>
+            <input type="submit" value="Submit it!">
+          </div>
         
         
         
