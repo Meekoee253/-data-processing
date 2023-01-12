@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Form Template</title>
+     <title>Data Processing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/main-forms.css">
  </head>
  <body>
      <header>
-     <h1 class="page-header">Form Template</h1>
+     <h1 class="page-header">Data Processing</h1>
         <nav class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
             <a href="#">Link</a>
@@ -18,103 +17,78 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
      </header>
-     
+ 
    <main class="wrapper">
  
-    <h2 class="subheader">Place form code below:</h2>
+    <h2 class="subheader">Shipping Info:</h2>
+    <div id="output"> output will go here
     <form method="get" action="" class="main-form">
+ 
       <div>
-        <label for="FirstName"> First Name</label><br>
-        <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required autofocus>
+        <label for="FirstName">First Name</label><br>
+        <input type="text" name="First_Name" id="FirstName" placeholder="Enter First Name" required autofocus>
+      </div>
+ 
+      <div>
+        <label for="LastName">Last Name</label><br>
+        <input type="text" name="Last_Name" id="LastName" placeholder="Enter Last Name" required>
+      </div>
+ 
+      <div>
+        <label for="Email">Email</label><br>
+        <input type="email" name="Email" id="Email" placeholder="Enter Email" required>
+      </div>
+ 
+      <div>
+        <label for="Phone">Phone Number</label><br>
+        <input type="tel" id="Phone" name="Phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      </div>
+ 
+      <div>
+        <label for="Address">Address</label><br>
+        <input type="text" name="Address" id="Address" placeholder="Address" required>
+      </div>
+ 
+      <div>
+        <label for="City">City</label><br>
+        <input type="text" name="City" id="City" placeholder="City" required>
+      </div>
+ 
+      <div>
+        <label for="State">State</label><br>
+        <select name="State" id="State" required>
+          <option value="">Please select state</option>
+          <option value="AK">Alaska</option>
+          <option value="CA">California</option>
+          <option value="NY">New York</option>
+          <option value="WA">Washington</option>
+        </select>
       </div>
       <div>
-        <label for="LastName"> Last Name</label><br>
-        <input type="text" name="LastName" id="LastName" placeholder="Last Name">
+        <label for="Postal">Postal Code</label><br>
+        <input type="text" name="Postal_Code" id="PostalCode" placeholder="Postal Code" required>
       </div>
+ 
       <div>
-        <label for="Email"> Email</label><br>
-        <input type="email" name="Email" id="Email" placeholder="Email">
-        </div>
-        <div>
-          <label for="Address"> Address</label><br>
-          <input type="text" name="Address" id="Address" placeholder="Address">
-        </div>
-        <div>
-          <label for="State"> State</label><br>
-          <select name="State" id="State" required>
-            <option value="">Please select state</option>
-            <option value="AK">Alaska</option>
-            <option value="CA">California</option>
-            <option value="OR">Oregon</option>
-            <option value="WA">Washington</option>
-          </select>
-        </div>
-        <div>
-          <fieldset>
-            <legend>Would you like to join our mailing list?</legend>
-            <label><input type="radio" name="JoinMailingList" value="Yes" required> Yes</label><br>
-            <label><input type="radio" name="JoinMailingList" value="No"> No</label>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <legend>Interested In</legend>
-            <label><input type="checkbox" name="InterestedIn" value="Website" required> Website</label><br>
-            <label><input type="checkbox" name="InterestedIn" value="OnlineCalendar"> Online Calendar</label><br>
-            <label><input type="checkbox" name="InterestedIn" value="ContactForm"> Contact Form</label><br>
-            <label><input type="checkbox" name="InterestedIn" value="Lollipops"> Complimentary Lollipops</label>
-          </fieldset>
-        </div>
-        
-        <div>
-          <label for="Comments"> Comments</label><br>
-          <textarea name="Comments" id="Comments" placeholder="Comments" cols="36" rows="4"></textarea>
-        </div>
-
-      
-
-        <div>
-        <form>
-          <label for="hear-about-us">How did you hear about us?</label><br>
-          <input type="radio" id="friend" name="hear-about-us" value="friend">
-          <label for="friend">A friend told me about you</label><br>
-          <input type="radio" id="google" name="hear-about-us" value="google">
-          <label for="google">I found you on Google</label><br>
-          <input type="radio" id="social-media" name="hear-about-us" value="social media">
-          <label for="social-media">I saw you on social media</label><br>
-          <input type="radio" id="other" name="hear-about-us" value="other">
-          <label for="other">Other</label>
-        </form> 
-        </div>
-
-
-          <form>
-          <label for="Track">Which track are you interested in?:</label><br>
-          <select id="Track" name="Track">
-            <option value="ad">AD</option>
-            <option value="qa">QA</option>
-            <option value="business">Business</option>
-            <option value="it">IT</option>
-            <option value="Other">Other</option>
-            </select>
-          </form> 
-
-          <div>
-            <input type="submit" value="Submit it!">
-          </div>
-        
-        
-        
+        <label for="Notes">Notes</label><br>
+        <textarea name="Notes" id="Notes" placeholder="Notes" cols="36" rows="4"></textarea>
+      </div>
+      <div> 
+        <input type="submit" value="Submit it!">
+      </div>
+    </div>
     </form>
+ 
     <footer>
-      <p>Copyright &copy; <script>document.write(new Date().getMonth() + 1 + '/' + new Date().getFullYear());</script></p>
+      <p>
+        <small>&copy; 2022-<span id="this-year"></span> by 
           Mico Enriquez, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
-
      </p>
     </footer>
   </main>
   <script src="js/main.js"></script>   
+  <script src="js/data-processing.js"></script>  
  </body>
 </html>
