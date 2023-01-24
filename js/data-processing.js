@@ -4,25 +4,48 @@
 const queryString = window.location.search;
 console.log(queryString);
 
+
+function toTitleCase(str) {
+  return str.toLowerCase().split(' ').map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}            
+
 let myData = "";
-if(queryString.length > 0){
-    const urlParams = new URLSearchParams(queryString);
+if(key == "Cart"){//cart
+  //alert("Cart Item: " + value);
 
-    urlParams.forEach(function(value, key) {
+    switch(value){
+      case "Widget":
+        myCart += "<p>Widget: $3.99</p><br>";
+        myTotal += 3.99;
+      break;
 
-      if(key == "Cart"){//cart
-        alert("Cart Item: " + value);
-      } else{//shipping label
-       //swaps underscore for space
-       key = key.split("_").join(" ");
+      case "Sprocket":
+        myCart += "<p>Sprocket: $5.99</p><br>";
+        myTotal += 5.99;
+      break;
 
-       myData += `<p>${key}: ${value}</p>`;
-      }
-      
-      //console.log(key, value);
-    });
+      case "Thingy":
+        myCart += "<p>Thingy: $1.99</p><br>";
+        myTotal += 1.99;
+      break;
+    }
+
+}else{//shipping label
+  //swaps underscores for space
+  key = key.split("_").join(" ");
+  if((key == "FirstName")  (key == "LastName")  (key == "City") || (key == "Address")) {
+    myData += <p>${key}: ${toTitleCase(value)}</p>;
+  } else {
+    myData += <p>${key}: ${value}</p>;
+  }
+}
+
+
+
+//console.log(key, value);
 
     myData += '<p><a href="index.html">CLEAR</a></p>';
 
     document.getElementById('output').innerHTML = myData;
-}
