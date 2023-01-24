@@ -36,16 +36,13 @@ if(key == "Cart"){//cart
   //swaps underscores for space
   key = key.split("_").join(" ");
   if((key == "FirstName")  (key == "LastName")  (key == "City") || (key == "Address")) {
-    myData += <p>${key}: ${toTitleCase(value)}</p>;
+    myData += `<p>${key}: ${toTitleCase(value)}</p>`;
   } else {
-    myData += <p>${key}: ${value}</p>;
+    myData += `<p>${key}: ${value}</p>`;
   }
 }
 
-
-
 //console.log(key, value);
-
     myData += '<p><a href="index.html">CLEAR</a></p>';
 
     document.getElementById('output').innerHTML = myData;
